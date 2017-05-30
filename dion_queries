@@ -1,0 +1,251 @@
+1. dinosaurs=# SELECT COUNT(name) FROM dinos
+dinosaurs-# ;
+ count
+-------
+   331
+(1 row)
+
+2.         name
+---------------------
+ Yuanmousaurus
+ Yinlong
+ Yingshanosaurus
+ Yimenosaurus
+ Yangchuanosaurus
+ Yandusaurus
+ Vulcanodon
+ Tuojiangosaurus
+ Torvosaurus
+ Yunnanosaurus
+ Sinraptor
+ Stegosaurus
+ Seismosaurus
+ Segisaurus
+ Scutellosaurus
+ Scelidosaurus
+ Saurophaganax
+ Sarcosaurus
+ Shunosaurus
+ Rhoetosaurus
+ Poekilopleuron
+: Podokesaurus
+ Piatnitzkysaurus
+ Proceratosaurus
+ Patagosaurus
+ Pantydraco
+ Datousaurus
+ Ornitholestes
+ Omeisaurus
+ Nqwebasaurus
+ Monolophosaurus
+ Othnielia
+ Megalosaurus
+ Massospondylus
+ Marshosaurus
+ Mamenchisaurus
+ Lufengosaurus
+ Lophostropheus
+ Lexovisaurus
+ Metriacanthosaurus
+ Lesothosaurus
+ Kentrosaurus
+ Juravenator
+ Jingshanosaurus
+  Janenschia
+  Huayangosaurus
+  Heterodontosaurus
+  Kotasaurus
+  Guanlong
+  Giraffatitan
+  Gasosaurus
+  Gargoyleosaurus
+  Eustreptospondylus
+  Europasaurus
+  Haplocanthosaurus
+Emausaurus
+Euhelopus
+Elaphrosaurus
+Dubreuillosaurus
+Dryosaurus
+Diplodocus
+Dilophosaurus
+Dicraeosaurus
+Cryolophosaurus
+Compsognathus
+Coelurus
+Chungkingosaurus
+Chirostenotes
+Chinshakiangosaurus
+Chaoyangsaurus
+Dacentrurus
+Cetiosaurus
+ Cetiosauriscus
+ Ceratosaurus
+ Chialingosaurus
+ Brachytrachelopan
+ Brachiosaurus
+ Bellusaurus
+ Barosaurus
+ Barapasaurus
+ Camarasaurus
+ Anchisaurus
+ Amygdalodon
+ Ammosaurus
+ Allosaurus
+ Agilisaurus
+ Apatosaurus
+ Lapparentosaurus
+ Hesperosaurus
+ Camptosaurus
+ Aardonyx
+ Archaeopteryx
+(92 rows)
+
+3. dinosaurs=# SELECT SUM(length) FROM dinos WHERE period = 'Cretaceous';
+   sum
+---------
+ 1366.45
+(1 row)
+
+4.
+......
+......
+Vivianae
+ Walkeri
+ Walkeri
+ Warrenae
+ Wetherilli
+ Wichmannianus
+ Woodi
+ Wucaii
+ Wyomingensis
+ Xinwaensis
+ Yamanpalliensis
+ Yangi
+ Yanshini
+ Yanzigouensis
+ Youngi
+ Youngi
+ Zdanskyi
+ Zhaoianus
+ Zhongheensis
+ Zoui
+(310 rows)
+
+5.
+......
+......
+Yuanmousaurus
+ Yimenosaurus
+ Vulcanodon
+ Supersaurus
+ Sonidosaurus
+ Seismosaurus
+ Saltasaurus
+ Rebbachisaurus
+ Quaesitosaurus
+ Shunosaurus
+ Rhoetosaurus
+ Plateosaurus
+ Pelorosaurus
+ Patagosaurus
+ Pantydraco
+ Paralititan
+ Datousaurus
+ Pleurocoelus
+ Opisthocoelicaudia
+ Omeisaurus
+ Nigersaurus
+:Neuquenosaurus
+ Nemegtosaurus
+ Mussaurus
+ Maxakalisaurus
+ Malawisaurus
+ Mamenchisaurus
+ Lufengosaurus
+ Magyarosaurus
+ Ligabuesaurus
+ Jobaria
+ Jingshanosaurus
+ Janenschia
+ Isisaurus
+ Hypselosaurus
+ Kotasaurus
+ Guaibasaurus
+ Giraffatitan
+ Europasaurus
+ Haplocanthosaurus
+ Erketu
+ Euhelopus
+ Diplodocus
+ Dicraeosaurus
+Chubutisaurus
+ Chinshakiangosaurus
+ Cetiosaurus
+Cetiosauriscus
+Brachytrachelopan
+Brachiosaurus
+Bellusaurus
+Barosaurus
+Barapasaurus
+Austrosaurus
+Camarasaurus
+Aragosaurus
+Antarctosaurus
+Anchisaurus
+Amygdalodon
+Ampelosaurus
+Amargasaurus
+Ammosaurus
+Alamosaurus
+Apatosaurus
+Lapparentosaurus
+Aardonyx
+Argentinosaurus
+Aegyptosaurus
+(68 rows)
+
+6.
+dinosaurs=# SELECT name FROM dinos ORDER BY length ASC LIMIT 1;
+    name
+-------------
+ Liaoxiornis
+(1 row)
+
+dinosaurs=# UPDATE dinos SET name = 'Shortie' WHERE name = 'Liaoxiornis';
+UPDATE 1
+dinosaurs=# SELECT name FROM dinos ORDER BY length ASC LIMIT 1;
+  name
+---------
+ Shortie
+(1 row)
+
+7.  dinosaurs=# SELECT name FROM dinos ORDER BY name ASC;
+
+
+Aardonyx
+
+8. dinosaurs=# SELECT name FROM dinos ORDER BY length DESC LIMIT 5;
+
+inosaurs=# UPDATE dinos
+SET name = 'The Famous Five'
+WHERE  name = 'Saltopus';UPDATE 1
+dinosaurs=# UPDATE dinos
+SET name = 'The Famous Five'
+WHERE  name = 'Yingshanosaurus';
+UPDATE 1
+dinosaurs=# UPDATE dinos
+SET name = 'The Famous Five'
+WHERE  name = 'Tsagantegia';
+UPDATE 1
+dinosaurs=# UPDATE dinos
+SET name = 'The Famous Five'
+WHERE  name = 'Pleurocoelus';
+UPDATE 1
+dinosaurs=# UPDATE dinos
+SET name = 'The Famous Five'
+WHERE  name = 'Platyceratops';
+UPDATE 1
+
+dinosaurs=# SELECT name FROM dinos ORDER BY length DESC LIMIT 5;
+this query keeps giving different results....????? so accidently changed some that didn't need to be changed
